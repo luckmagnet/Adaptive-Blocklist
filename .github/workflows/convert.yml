@@ -1,0 +1,35 @@
+name: Convert Hosts to AdBlock
+
+on:
+  push:
+    paths:
+      - 'hosts.txt'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Convert format
+        run: |
+          echo "! Title: My Custom AdBlock List" > adblock.txt
+          echo "! Last Updated: $(date -u)" >> adblock.txt
+          echo "!" >> adblock.txt
+          
+          # Logic: Remove 0.0.0.0 or 127.0.0.1, trim whitespace, 
+          # ignore comments, and wrap in AdBlock syntax.
+          grep -v '^#' hosts.txt | grep -v '^$' | awk '{print "||" $2 "^"}' >> adblock.txt
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add adblock.txt
+          git commit -m "Update adblock.txt" || echo "No changes to commit"
+          git push
