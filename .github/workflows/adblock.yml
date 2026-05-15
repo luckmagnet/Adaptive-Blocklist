@@ -6,6 +6,7 @@ on:
       - '**/conversion.yaml'
       - '**/convert_hosts_to_adblock.py'
       - '**/hosts'
+      - '**/hosts.txt'
   workflow_dispatch:
 
 jobs:
@@ -31,7 +32,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          HOSTS_FILE=hosts
+          HOSTS_FILE=hosts.txt
           CFG_FILE=conversion.yaml
           if [ ! -f "$HOSTS_FILE" ]; then
             echo "ERROR: hosts file not found at '$HOSTS_FILE'" >&2
