@@ -13,13 +13,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - name: Install PyYAML
-        run: python -m pip install pyyaml
-      - name: Run converter
-        run: python convert_hosts_to_adblock.py hosts conversion.yaml > adblock.txt
-      - name: Show output (first 50 lines)
-        run: head -n 50 adblock.txt
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pyyaml
+
+      - name: Show repo files (debug)
+        run: |
+          echo "PWD: $(pwd)"
+          ls -la
+
+      - name: Run converter (verbose, fail if missing)
+        shell: bash
+        run: |
+          set -euo pipefail
+          HOSTS_FILE=hosts
+          CFG_FILE=conversion.yaml
+          if [ ! -f "$HOSTS_FILE" ]; then
+            echo "ERROR: hosts file not found at '$HOSTS_FILE'" >&2
+            exit 2
+          fi
+          if [ ! -f "$CFG_FILE" ]; then
+            echo "ERROR: config file not found at '$CFG_FILE'" >&2
+            exit 2
+          fi
+          echo "Running converter: python convert_hosts_to_adblock.py $HOSTS_FILE $CFG_FILE"
+          python -u convert_hosts_to_adblock.py "$HOSTS_FILE" "$CFG_FILE" > adblock.txt
+          echo "Converter exit: $?"
+          echo "adblock.txt (first 50 lines):"
+          head -n 50 adblock.txt
+
+      - name: Upload adblock as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: adblock-list
+          path: adblock.txt
