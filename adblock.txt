@@ -1,47 +1,4 @@
 ! Title: My Custom AdBlock List
-! Last Updated: Fri May 15 04:23:53 UTC 2026
+! Last Updated: Fri May 15 04:26:08 UTC 2026
+! Total Entries: 50
 !
-||Convert^
-||^
-||^
-||^
-||'**/conversion.yaml'^
-||'**/convert_hosts_to_adblock.py'^
-||'**/hosts'^
-||'**/hosts.txt'^
-||^
-||^
-||^
-||ubuntu-latest^
-||^
-||uses:^
-||name:^
-||actions/setup-python@v4^
-||^
-||'3.11'^
-||name:^
-||python^
-||name:^
-||bash^
-|||^
-||-euo^
-||prefer^
-||[^
-||^
-||[^
-||^
-||^
-||"ERROR:^
-||2^
-||^
-||^
-||[^
-||"ERROR:^
-||2^
-||^
-||-u^
-||name:^
-||actions/upload-artifact@v4^
-||^
-||adblock-list^
-||adblock.txt^
