@@ -32,16 +32,21 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          HOSTS_FILE=hosts.txt
-          CFG_FILE=conversion.yaml
-          if [ ! -f "$HOSTS_FILE" ]; then
-            echo "ERROR: hosts file not found at '$HOSTS_FILE'" >&2
+          # accept either hosts or hosts.txt
+          if [ -f hosts ]; then
+            HOSTS_FILE=hosts
+          elif [ -f hosts.txt ]; then
+            HOSTS_FILE=hosts.txt
+          else
+            echo "ERROR: hosts file not found (checked 'hosts' and 'hosts.txt')" >&2
             exit 2
           fi
+          CFG_FILE=conversion.yaml
           if [ ! -f "$CFG_FILE" ]; then
             echo "ERROR: config file not found at '$CFG_FILE'" >&2
             exit 2
           fi
+          echo "Using hosts file: $HOSTS_FILE"
           echo "Running converter: python convert_hosts_to_adblock.py $HOSTS_FILE $CFG_FILE"
           python -u convert_hosts_to_adblock.py "$HOSTS_FILE" "$CFG_FILE" > adblock.txt
           echo "Converter exit: $?"
