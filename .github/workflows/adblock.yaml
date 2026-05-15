@@ -1,0 +1,17 @@
+hosts:
+  comment_prefix: "#"
+  ip_blocklist:
+    - "0.0.0.0"
+    - "127.0.0.1"
+    - "::1"
+output:
+  format: "adblock"
+  default_rule_prefix: "||"
+  default_rule_suffix: "^"
+  keep_comments: true
+  comment_prefix: "!"
+filters:
+  skip_domains:
+    - "localhost"
+    - "broadcasthost"
+  normalize: true
