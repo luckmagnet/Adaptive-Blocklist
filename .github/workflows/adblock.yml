@@ -6,6 +6,7 @@ on:
       - '**/conversion.yaml'
       - '**/convert_hosts_to_adblock.py'
       - '**/hosts'
+  workflow_dispatch:
 
 jobs:
   convert:
