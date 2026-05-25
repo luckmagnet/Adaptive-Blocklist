@@ -1,4 +1,4 @@
-# Adaptive-Filter-List
+# Adaptive Blocklist
 Filters in adblock syntax and hosts file
 
 ---
