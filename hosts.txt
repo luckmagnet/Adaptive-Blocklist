@@ -4,6 +4,22 @@
 ! Homepage: https://github.com/luckmagnet/Adaptive-Filter-List/
 ! Issues: https://github.com/luckmagnet/Adaptive-Filter-List/issues
 
+# https://github.com/luckmagnet/Adaptive-Blocklist/issues/15
+0.0.0.0    justgetflux.com
+0.0.0.0    weektodo.me
+
+# https://github.com/luckmagnet/Adaptive-Blocklist/issues/14
+0.0.0.0    download.wireguard.com
+
+# https://github.com/luckmagnet/Adaptive-Blocklist/issues/13
+0.0.0.0    2faguard.app
+
+# https://github.com/luckmagnet/Adaptive-Blocklist/issues/12
+0.0.0.0    betterbird.eu
+
+# https://github.com/luckmagnet/Adaptive-Blocklist/issues/11
+0.0.0.0    updates.bravesoftware.com
+
 # https://github.com/luckmagnet/Adaptive-Filter-List/issues/10
 0.0.0.0    status.bitwarden.com
 
@@ -13,6 +29,13 @@
 0.0.0.0    dns.msftncsi.com
 0.0.0.0    ecs.office.com
 0.0.0.0    mobile.events.data.microsoft.com
+0.0.0.0    ctldl.windowsupdate.com
+0.0.0.0    slscr.update.microsoft.com
+0.0.0.0    oneocsp.microsoft.com
+0.0.0.0    officeclient.microsoft.com
+0.0.0.0    msedge.api.cdp.microsoft.com
+0.0.0.0    msedge.f.dl.delivery.mp.microsoft.com
+0.0.0.0    msedge.b.tlu.dl.delivery.mp.microsoft.com
 
 # https://github.com/luckmagnet/Adaptive-Filter-List/issues/8
 0.0.0.0    nvidiagrid.net
@@ -497,3 +520,4 @@
 
 # https://github.com/luckmagnet/Adaptive-Filter-List/issues/3
 0.0.0.0    push.services.mozilla.com
+0.0.0.0    thunderbird-settings.thunderbird.net
