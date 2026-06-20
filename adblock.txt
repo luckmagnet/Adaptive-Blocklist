@@ -1,13 +1,26 @@
 ! Title: My Custom AdBlock List
-! Last Updated: Fri May 15 04:29:25 UTC 2026
-! Total Entries: 499
+! Last Updated: Sat Jun 20 07:43:00 UTC 2026
+! Total Entries: 523
 !
+||justgetflux.com^
+||weektodo.me^
+||download.wireguard.com^
+||2faguard.app^
+||betterbird.eu^
+||updates.bravesoftware.com^
 ||status.bitwarden.com^
 ||clients.config.office.net^
 ||login.live.com^
 ||dns.msftncsi.com^
 ||ecs.office.com^
 ||mobile.events.data.microsoft.com^
+||ctldl.windowsupdate.com^
+||slscr.update.microsoft.com^
+||oneocsp.microsoft.com^
+||officeclient.microsoft.com^
+||msedge.api.cdp.microsoft.com^
+||msedge.f.dl.delivery.mp.microsoft.com^
+||msedge.b.tlu.dl.delivery.mp.microsoft.com^
 ||nvidiagrid.net^
 ||geforce.com^
 ||geforcenow.com^
@@ -476,3 +489,4 @@
 ||ogs.google.com^
 ||alive.github.com^
 ||push.services.mozilla.com^
+||thunderbird-settings.thunderbird.net^
