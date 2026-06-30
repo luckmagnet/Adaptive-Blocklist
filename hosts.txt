@@ -510,6 +510,7 @@
 0.0.0.0    anthropic.com
 
 # https://github.com/luckmagnet/Adaptive-Filter-List/issues/1
+0.0.0.0    aistudio.google.com
 0.0.0.0    ogs.google.com
 
 # https://github.com/luckmagnet/Adaptive-Filter-List/issues/2
