@@ -29,7 +29,6 @@
 0.0.0.0    dns.msftncsi.com
 0.0.0.0    ecs.office.com
 0.0.0.0    mobile.events.data.microsoft.com
-0.0.0.0    oneocsp.microsoft.com
 0.0.0.0    officeclient.microsoft.com
 0.0.0.0    msedge.api.cdp.microsoft.com
 0.0.0.0    msedge.f.dl.delivery.mp.microsoft.com
