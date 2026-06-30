@@ -1,6 +1,6 @@
 ! Title: My Custom AdBlock List
-! Last Updated: Sat Jun 20 08:56:59 UTC 2026
-! Total Entries: 521
+! Last Updated: Tue Jun 30 11:20:05 UTC 2026
+! Total Entries: 520
 !
 ||justgetflux.com^
 ||weektodo.me^
@@ -14,7 +14,6 @@
 ||dns.msftncsi.com^
 ||ecs.office.com^
 ||mobile.events.data.microsoft.com^
-||oneocsp.microsoft.com^
 ||officeclient.microsoft.com^
 ||msedge.api.cdp.microsoft.com^
 ||msedge.f.dl.delivery.mp.microsoft.com^
