@@ -4,6 +4,9 @@
 ! Homepage: https://github.com/luckmagnet/Adaptive-Filter-List/
 ! Issues: https://github.com/luckmagnet/Adaptive-Filter-List/issues
 
+# https://github.com/luckmagnet/Adaptive-Blocklist/issues/16
+0.0.0.0    zomato.com
+
 # https://github.com/luckmagnet/Adaptive-Blocklist/issues/15
 0.0.0.0    justgetflux.com
 0.0.0.0    weektodo.me
