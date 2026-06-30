@@ -1,6 +1,6 @@
 ! Title: My Custom AdBlock List
-! Last Updated: Tue Jun 30 11:20:22 UTC 2026
-! Total Entries: 520
+! Last Updated: Tue Jun 30 12:45:07 UTC 2026
+! Total Entries: 521
 !
 ||justgetflux.com^
 ||weektodo.me^
@@ -483,6 +483,7 @@
 ||deepseek.com^
 ||claude.ai^
 ||anthropic.com^
+||aistudio.google.com^
 ||ogs.google.com^
 ||alive.github.com^
 ||push.services.mozilla.com^
